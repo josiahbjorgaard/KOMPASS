@@ -1,7 +1,27 @@
-# EKS Getting Started Guide Configuration
+# CLASS: CLoud-based Autoscaling Spark Server
 
-This is the full configuration from https://www.terraform.io/docs/providers/aws/guides/eks-getting-started.html
+CLASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
 
-See that guide for additional information.
+Value prop.-The project provides value by using computing resources efficiently through minimizing waisted AWS cost and by eliminating the time and effort spent by data engineers in deploying their cloud based data pipelines.
 
-NOTE: This full configuration utilizes the [Terraform http provider](https://www.terraform.io/docs/providers/http/index.html) to call out to icanhazip.com to determine your local workstation external IP for easily configuring EC2 Security Group access to the Kubernetes master servers. Feel free to replace this as necessary.
+MVP-One-click deployment of a toy Spark job on an AWS EC2 instance.
+
+Eng. Challenge - Containerizing Spark pipelines and running multiple Spark jobs on a Kubernetes cluster.
+
+## Built With
+
+* [Kubernetes](https://kubernetes.io/)
+* [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
+* [Prometheus](https://prometheus.io/)
+
+## Authors
+
+* **Josiah Bjorgaard** - *Initial work* - [CLASS](https://github.com/josiahbjorgaard/class)
+
+## License
+
+This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Insight Data Science
