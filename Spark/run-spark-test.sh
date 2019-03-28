@@ -3,7 +3,7 @@ bin/spark-submit \
     --deploy-mode cluster \
     --name spark-pi \
     --class org.apache.spark.examples.SparkPi \
-    --conf spark.executor.instances=2 \
+    --conf spark.executor.instances=$1 \
     --conf spark.kubernetes.container.image=josiahbjorgaard/spark \
     --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
     local:///opt/spark/examples/jars/spark-examples_2.11-2.4.0.jar 
