@@ -128,7 +128,7 @@ resource "aws_autoscaling_group" "CLASS" {
   launch_configuration = "${aws_launch_configuration.CLASS.id}"
   max_size             = 8
   min_size             = 1
-  name                 = "terraform-eks-CLASS"
+  name                 = "CLASS"
   vpc_zone_identifier  = ["${aws_subnet.CLASS.*.id}"]
 
   tag {

@@ -7,4 +7,4 @@ until kubectl get servicemonitors --all-namespaces ; do date; sleep 1; echo ""; 
 
 kubectl apply -f manifests/ # This command sometimes may need to be done twice (to workaround a race condition).
 cd ../
-kubectl --namespace monitoring port-forward svc/grafana 3000
+#kubectl --namespace monitoring port-forward svc/grafana 3000

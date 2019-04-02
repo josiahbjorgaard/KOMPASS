@@ -1,7 +1,7 @@
 bin/spark-submit \
     --master k8s://http://127.0.0.1:8001 \
     --deploy-mode cluster \
-    --name spark-pi \
+    --name spark-pi-2 \
     --class org.apache.spark.examples.SparkPi \
     --conf spark.executor.instances=$1 \
     --conf spark.kubernetes.container.image=josiahbjorgaard/spark \
