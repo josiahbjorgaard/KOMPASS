@@ -54,10 +54,22 @@ RUN set -x && \
 
 #FROM ubuntu:latest
 #RUN apt-get update -y
+RUN apk add --no-cache python && \
+    apk add --no-cache python3 && \
+    python -m ensurepip && \
+    python3 -m ensurepip && \
+    # We remove ensurepip since it adds no functionality since pip is
+    # installed on the image and it just takes up 1.6MB on the image
+    rm -r /usr/lib/python*/ensurepip && \
+    pip install --upgrade pip setuptools 
+    # You may install with python3 packages by using pip3.6
+    # Removed the .cache to save space
+    #rm -r /root/.cache #Doesn't seem to be there JAKB
 
 #RUN apt-get install -y python-pip python-dev build-essential
-#COPY . /app
-#WORKDIR /app
-#RUN pip install -r requirements.txt
-#ENTRYPOINT ["python"]
-#CMD ["app.py"]
+#WORKDIR /home
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
