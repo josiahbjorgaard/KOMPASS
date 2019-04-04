@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import Response
 from flask import request
 import subprocess
 app = Flask(__name__)
@@ -10,14 +11,16 @@ def form():
         nodes = request.form.get('nodes')
         example = request.form.get('example')
         command = ['sh','run-spark-test.sh',nodes,example,sparkinput]
-        process = subprocess.Popen(command, stdout = subprocess.PIPE)
-        print("Running")
-        output, err = process.communicate()
-        return output
+        p = subprocess.Popen(command, stdout = subprocess.PIPE, bufsize=1)
+        def generate(): 
+            for line in iter(p.stdout.readline, b''):
+                yield line
+        #output, err = process.communicate()
+        return Response(generate(),  mimetype='application/json')
 
     return '''<form method="POST">
                   Number of Nodes: <input type="text" name="nodes"><br>
-                  Spark Example: <input type="text" name='example"><br>
+                  Spark Example: <input type="text" name="example"><br>
                   Spark Input: <input type="text" name="sparkinput"><br>
                   <input type="submit" value="Submit"><br>
               </form>'''
