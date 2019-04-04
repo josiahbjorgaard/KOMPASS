@@ -13,6 +13,8 @@ Eng. Challenge - Containerizing Spark pipelines and running multiple Spark jobs 
 * [Kubernetes](https://kubernetes.io/)
 * [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
 * [Prometheus](https://prometheus.io/)
+* [Flask](https://flask.io/)
+* [Terraform](https://terraform.io/)
 
 ## Authors
 

@@ -20,5 +20,5 @@ def form():
                   <input type="submit" value="Submit"><br>
               </form>'''
 
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0')
