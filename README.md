@@ -14,19 +14,19 @@ for more information, see the links to the specific project sites below.
 
 Additionally, an operational Apache Spark 2.3+ docker image must be pubished to your dockerhub account and accessible by the deployed EKS cluster. The build is automated in the relevant Apache Spark source distributions as detailed in the link below.
 
-### Build
+### Set-up
 
 Edit the dockerhub user name to reflect your public repository.
-
-Run 
+To leverage the autodeployment run 
 ```shell 
 ./setup-kompass.sh
 ```
-to leverage the autodeployment, build and publish the front end docker image, and deploy the autoscaling features.
+This run terraform to build out the infastructure, compile and publish the front end docker image, deploy the associated services, and deploy the autoscaling features.
 
-###Run
+### Run
 
-Run ```shell kubectl get svc kompass``` to obtain your ip address for accessing the front end. Enter this into a web browser to gain access to the front end interface. From this, you can select the number of nodes, spark example java class, and modifier to add to the call to the examples.jar file.
+Run ```kubectl get svc kompass-service``` to obtain your ip address for accessing the front end. Enter this into a web browser. From the input fields, you can select the number of nodes, spark example java class, and modifier to add to the call to the examples.jar file.
+Submitting the form will run a Spark application and write the stdout from spark-submit to the web browser.
 
 ## Tools used by KOMPASS
 
