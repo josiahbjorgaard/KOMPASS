@@ -2,6 +2,10 @@
 
 KOMPASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
 
+[Link](#) to presentation.
+
+<hr/>
+
 ## Useage
 
 ### Prerequisites
@@ -29,7 +33,13 @@ This run terraform to build out the infastructure, compile and publish the front
 Run ```kubectl get svc kompass-service``` to obtain your ip address for accessing the front end. Enter this into a web browser. From the input fields, you can select the number of nodes, spark example java class, and modifier to add to the call to the examples.jar file.
 Submitting the form will run a Spark application and write the stdout from spark-submit to the web browser.
 
-## Tools used by KOMPASS
+<hr/>
+
+## Introduction
+
+KOMPASS allows multiple users to run many different Spark applications on the same EKS resource in an efficient way. It autoscales the number of EC2 instances and Spark clusters in order to meet demand at any given time. Custom metrics from Prometheus are used to predict the upcoming resource needs so that an accomodating number of instances are available when Spark applications need to be run, and then scales back the number of instances to save AWS costs. It is autodeployable with infastructure as code and fully containerized, so developers can spend more time on their Spark applications and less time leveraging the infastruture and dependencies necessary to run them.
+
+## Architecture
 
 * [Kubernetes](https://kubernetes.io/)
 * [Docker](https://docker.io)
@@ -38,9 +48,13 @@ Submitting the form will run a Spark application and write the stdout from spark
 * [Flask](https://flask.io/)
 * [Terraform](https://terraform.io/)
 
+## Engineering Challenges
+
+## Trade-offs
+
 ## Authors
 
-* **Josiah Bjorgaard** - *Initial work* - [KOMPASS](https://github.com/josiahbjorgaard/kompass)
+* **Josiah Bjorgaard** - [KOMPASS](https://github.com/josiahbjorgaard/kompass)
 
 ## License
 
