@@ -1,14 +1,30 @@
-# CLASS: CLoud-based Autoscaling Spark Server
+# KOMPASS (Kubernetes Orchestrated Multi-user Parallel Autoscaling Spark Server)
 
-CLASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
+KOMPASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
 
-Value prop.- Companies leveraging data analytics require compute resources to process and analyze data. These compute resources either exceed the amount of required resources at any given time or are provisioned over time. Setting up the use of Spark requires significant time investment from data engineers/scientists to use the compute resources which could be used for focused developments otherwise. A one-click provisioned autoscaling Spark pipeline saves the cost of wasted resources by provisioning only the necessary compute time and saves engineers times setting up pipelines and allows them on demand compute resources.
+## Useage
 
-MVP-One-click deployment of a toy Spark job on an AWS EC2 instance.
+###Prerequisites
 
-Eng. Challenge - Containerizing Spark pipelines and running multiple Spark jobs on a Kubernetes cluster.
+The following packages must be installed and operational locally:
+* terraform
+* kubectl
+* aws-cli
+for more information, see the links to the specific project sites below.
 
-## Built With
+Additionally, an operational Apache Spark 2.3+ docker image must be pubished to your dockerhub account and accessible by the deployed EKS cluster. The build is automated in the relevant Apache Spark source distributions as detailed in the link below.
+
+###Build
+
+Edit the dockerhub user name to reflect your public repository.
+
+Run '''shell ./setup-kompass.sh''' to leverage the autodeployment, build and publish the front end docker image, and deploy the autoscaling features.
+
+###Run
+
+Run '''shell kubectl get svc kompass''' to obtain your ip address for accessing the front end. Enter this into a web browser to gain access to the front end interface. From this, you can select the number of nodes, spark example java class, and modifier to add to the call to the examples.jar file.
+
+## Tools used by KOMPASS
 
 * [Kubernetes](https://kubernetes.io/)
 * [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
@@ -18,7 +34,7 @@ Eng. Challenge - Containerizing Spark pipelines and running multiple Spark jobs 
 
 ## Authors
 
-* **Josiah Bjorgaard** - *Initial work* - [CLASS](https://github.com/josiahbjorgaard/class)
+* **Josiah Bjorgaard** - *Initial work* - [KOMPASS](https://github.com/josiahbjorgaard/kompass)
 
 ## License
 
