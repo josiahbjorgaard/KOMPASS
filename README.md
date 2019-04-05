@@ -6,13 +6,14 @@ KOMPASS provides one-click deployment of your team's Apache Spark jobs using aut
 
 ### Prerequisites
 
-The following packages must be installed and operational locally:
+The following packages must be installed and configured locally:
 * terraform
 * kubectl
 * aws-cli
+
 for more information, see the links to the specific project sites below.
 
-Additionally, an operational Apache Spark 2.3+ docker image must be pubished to your dockerhub account and accessible by the deployed EKS cluster. The build is automated in the relevant Apache Spark source distributions as detailed in the link below.
+An operational Apache Spark 2.4.0 docker image must be pubished to your dockerhub account and accessible by the deployed EKS cluster. The build is automated in the relevant Apache Spark source distributions as detailed in the link below. The following folders need to be copied to the frontend/Docker-Image folder: bin, sbin, jars, examples, or the whole distribution folder can be placed there. Future versions will automate this.
 
 ### Set-up
 
