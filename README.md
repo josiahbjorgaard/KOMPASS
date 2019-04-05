@@ -31,6 +31,7 @@ Submitting the form will run a Spark application and write the stdout from spark
 ## Tools used by KOMPASS
 
 * [Kubernetes](https://kubernetes.io/)
+* [Docker](https://docker.io)
 * [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
 * [Prometheus](https://prometheus.io/)
 * [Flask](https://flask.io/)

@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: KOMPASS-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: KOMPASS
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 5000
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: 5000
