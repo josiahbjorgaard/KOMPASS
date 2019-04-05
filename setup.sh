@@ -1,3 +1,5 @@
+#!/bin/bash
+#This is a bash script to run the set-up of KOMPASS
 cd autodeploy
 terraform init <<< 'yes'
 terraform apply <<< 'yes'
