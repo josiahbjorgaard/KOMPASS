@@ -1,20 +1,20 @@
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
-  name: KOMPASS
+  name: kompass
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: KOMPASS
+      app: kompass
   template:
     metadata:
       labels:
-        app: KOMPASS
+        app: kompass
     spec:
       containers:
-        - name: KOMPASS
-          image: josiahbjorgaard/KOMPASS-front-end:latest
+        - name: kompass
+          image: josiahbjorgaard/kompass:latest
           ports:
             - containerPort: 5000
           resources:
