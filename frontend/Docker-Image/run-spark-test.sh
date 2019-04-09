@@ -10,3 +10,4 @@ Spark/bin/spark-submit \
     --conf spark.kubernetes.container.image=josiahbjorgaard/spark \
     --conf spark.kubernetes.authenticate.driver.serviceAccountName=spark \
     local:///opt/spark/examples/jars/spark-examples_2.11-2.4.0.jar $3
+echo "Finished running Spark-submit!"
