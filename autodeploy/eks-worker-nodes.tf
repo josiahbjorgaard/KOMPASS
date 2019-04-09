@@ -126,7 +126,7 @@ resource "aws_launch_configuration" "kompass" {
 resource "aws_autoscaling_group" "kompass" {
   desired_capacity     = 2
   launch_configuration = "${aws_launch_configuration.kompass.id}"
-  max_size             = 8
+  max_size             = 100
   min_size             = 1
   name                 = "kompass"
   vpc_zone_identifier  = ["${aws_subnet.kompass.*.id}"]
