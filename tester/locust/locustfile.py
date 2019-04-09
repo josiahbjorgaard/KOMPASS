@@ -8,7 +8,7 @@ class UserBehavior(TaskSet):
     def runspark(self):
         with self.client.get("/?nodes=4&input=10", catch_response=True) as response:
             if response.status_code is not 200:
-                response.failure("HTTP returned " + response.status_code)
+                response.failure("HTTP returned " + str(response.status_code))
             if response.text.find("Succeeded") > 0: # Text is on the page
                 response.success()
             else:
@@ -16,5 +16,5 @@ class UserBehavior(TaskSet):
 
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
-    min_wait = 50
-    max_wait = 100
+    min_wait = 1000
+    max_wait = 1000
