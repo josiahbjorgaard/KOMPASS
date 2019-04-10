@@ -113,7 +113,7 @@ resource "aws_launch_configuration" "kompass" {
   associate_public_ip_address = true
   iam_instance_profile        = "${aws_iam_instance_profile.kompass-node.name}"
   image_id                    = "${data.aws_ami.eks-worker.id}"
-  instance_type               = "t3.small" 
+  instance_type               = "m5.xlarge" 
   name_prefix                 = "kompass"
   security_groups             = ["${aws_security_group.kompass-node.id}"]
   user_data_base64            = "${base64encode(local.kompass-node-userdata)}"

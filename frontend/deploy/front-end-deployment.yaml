@@ -16,7 +16,8 @@ spec:
         - name: kompass
           image: josiahbjorgaard/kompass:latest
           ports:
-            - containerPort: 5000
+            - name: http
+              containerPort: 5000
           resources:
             requests:
               cpu: 100m

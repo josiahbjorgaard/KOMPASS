@@ -3,8 +3,11 @@
 from flask import Flask
 from flask import Response
 from flask import request,render_template
+from prometheus_flask_exporter import PrometheusMetrics
 import subprocess
+
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 
 @app.route("/",methods = ['GET'])
 def form():
@@ -44,4 +47,5 @@ def form():
 
 if __name__ == '__main__':
 #    app.run(debug=True,host='0.0.0.0')
-     app.run(threaded=True,host='0.0.0.0')
+#     app.run(threaded=True,host='0.0.0.0')
+    app.run(host='0.0.0.0')
