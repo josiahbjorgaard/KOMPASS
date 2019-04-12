@@ -5,7 +5,7 @@ terraform init <<< 'yes'
 terraform apply <<< 'yes'
 ./finish_eks_setup.sh
 cd ../autoscale
-./setup-autoscale.sh
+./setup-autoscaler.sh
 cd ../frontend
 ./setup-frontend.sh
 cd ../

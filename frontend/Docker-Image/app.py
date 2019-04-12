@@ -9,7 +9,7 @@ import subprocess
 app = Flask(__name__)
 metrics = PrometheusMetrics(app)
 
-@app.route("/",methods = ['GET'])
+@app.route("/run",methods = ['GET'])
 def form():
     if request.method == 'GET': #this block is only entered when the form is submitted
         #request.form.get would come from post data, change request.method to 'POST' and fomr method to "POST'
