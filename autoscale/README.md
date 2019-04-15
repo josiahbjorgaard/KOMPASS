@@ -5,7 +5,6 @@ Run
 ```shell
 ./config_autoscaler.sh
 ``` 
-to set-up the autoscaling service
-
-## Development
-Prometheus support and grafana dashboard is in development
+to set-up the autoscaling services. \br
+This includes horizontal pod autoscaler (HPA) and cluster autoscaler. \br
+HPA requires monitoring deployment to be set-up.

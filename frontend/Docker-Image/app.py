@@ -23,7 +23,7 @@ def form():
         def inner():
             for line in iter(p.stdout.readline,''):
                 yield line.rstrip() + '<br/>\n'
-
         return Response(inner(), mimetype='text/html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
