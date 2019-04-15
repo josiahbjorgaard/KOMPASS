@@ -12,6 +12,7 @@ KOMPASS provides one-click deployment of your team's Apache Spark jobs using aut
 
 The following packages must be installed and configured locally:
 * terraform
+* docker
 * kubectl
 * aws-cli
 
@@ -45,6 +46,8 @@ KOMPASS allows multiple users to run many different Spark applications on the sa
 * [Docker](https://docker.io)
 * [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
 * [Prometheus](https://prometheus.io/)
+* [Grafana](https://grafana.com)
+* [Prometheus Operator] (https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html)
 * [Flask](https://flask.io/)
 * [Terraform](https://terraform.io/)
 

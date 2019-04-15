@@ -1,7 +1,9 @@
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: kompass
+  labels: 
+    app: kompass
 spec:
   replicas: 3
   selector:
@@ -13,11 +15,8 @@ spec:
         app: kompass
     spec:
       containers:
-        - name: kompass
+        - name: metrics-provider
           image: josiahbjorgaard/kompass:latest
           ports:
             - name: http
               containerPort: 5000
-          resources:
-            requests:
-              cpu: 100m
