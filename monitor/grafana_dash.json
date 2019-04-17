@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 10,
-  "iteration": 1555370670352,
+  "iteration": 1555475909299,
   "links": [],
   "panels": [
     {
@@ -63,14 +63,14 @@
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
-          "legendFormat": "Nodes",
+          "legendFormat": "Nodes (EC2 Instances)",
           "refId": "A"
         },
         {
           "expr": "count(kube_pod_status_phase{phase=\"Running\",pod=~\"kompass.*\"})",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "Pods",
+          "legendFormat": "KOMPASS Pods",
           "refId": "B"
         }
       ],
@@ -149,7 +149,7 @@
       "renderer": "flot",
       "seriesOverrides": [],
       "stack": true,
-      "steppedLine": true,
+      "steppedLine": false,
       "targets": [
         {
           "expr": "sum(kube_pod_status_phase{pod=~\"spark.*driver\",phase=\"Failed\"})",
@@ -178,7 +178,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Spark Driver Pod Status",
+      "title": "Spark Driver Pod Statuses",
       "tooltip": {
         "shared": true,
         "sort": 1,
@@ -235,7 +235,7 @@
         "current": false,
         "max": false,
         "min": false,
-        "show": false,
+        "show": true,
         "total": false,
         "values": false
       },
@@ -253,27 +253,20 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(flask_http_request_duration_seconds_sum{status=\"200\"} [1m]))",
+          "expr": "sum(rate(flask_http_request_total{status=\"200\"}[30s]))",
           "format": "time_series",
           "instant": false,
           "interval": "1s",
           "intervalFactor": 1,
-          "legendFormat": "Spark Execution Time",
+          "legendFormat": "Request/Second",
           "refId": "A"
-        },
-        {
-          "expr": "1/sum(rate(flask_http_request_total{status=\"200\"}[1m]))",
-          "format": "time_series",
-          "intervalFactor": 1,
-          "legendFormat": "Seconds per HTTP Request",
-          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Users/Time",
+      "title": "User Requests",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -290,7 +283,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": "Average Spark Time",
+          "label": "Requests/s",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -361,7 +354,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU Usage",
+      "title": "CPU Usage of Pods",
       "tooltip": {
         "shared": false,
         "sort": 0,
@@ -578,7 +571,7 @@
     ]
   },
   "time": {
-    "from": "now-3m",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -609,5 +602,5 @@
   "timezone": "",
   "title": "KOMPASS",
   "uid": "KOMPASS",
-  "version": 2
+  "version": 1
 }

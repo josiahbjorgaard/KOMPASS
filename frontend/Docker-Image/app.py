@@ -20,10 +20,10 @@ def form():
         example = request.args.get('example','SparkPi')
         command = ['sh','run-spark-test.sh',nodes,example,sparkinput]
         p = subprocess.Popen(command,stdout = subprocess.PIPE, bufsize=1)
-        def inner():
-            for line in iter(p.stdout.readline,''):
-                yield line.rstrip() + '<br/>\n'
-        return Response(inner(), mimetype='text/html')
-
+        #def inner():
+        #    for line in iter(p.stdout.readline,''):
+        #        yield line.rstrip() + '<br/>\n'
+        #return Response(inner(), mimetype='text/html')
+        return Response(p.stdout, mimetype='text/html')
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
