@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 10,
-  "iteration": 1555475909299,
+  "iteration": 1555529530886,
   "links": [],
   "panels": [
     {
@@ -28,7 +28,7 @@
       "datasource": "prometheus",
       "fill": 1,
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 12,
         "x": 0,
         "y": 0
@@ -48,7 +48,7 @@
       "linewidth": 4,
       "links": [],
       "maxDataPoints": 100,
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -123,7 +123,7 @@
       "datasource": "prometheus",
       "fill": 10,
       "gridPos": {
-        "h": 8,
+        "h": 11,
         "w": 12,
         "x": 12,
         "y": 0
@@ -141,7 +141,7 @@
       "lines": true,
       "linewidth": 4,
       "links": [],
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -224,10 +224,10 @@
       "description": "",
       "fill": 1,
       "gridPos": {
-        "h": 9,
+        "h": 10,
         "w": 12,
         "x": 0,
-        "y": 8
+        "y": 11
       },
       "id": 10,
       "legend": {
@@ -242,7 +242,7 @@
       "lines": true,
       "linewidth": 1,
       "links": [],
-      "nullPointMode": "null",
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 2,
@@ -311,10 +311,10 @@
       "datasource": "$datasource",
       "fill": 10,
       "gridPos": {
-        "h": 9,
+        "h": 10,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 11
       },
       "id": 1,
       "legend": {
@@ -329,7 +329,7 @@
       "lines": true,
       "linewidth": 0,
       "links": [],
-      "nullPointMode": "null as zero",
+      "nullPointMode": "connected",
       "paceLength": 10,
       "percentage": false,
       "pointradius": 5,
@@ -397,7 +397,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 21
       },
       "id": 7,
       "panels": [],
@@ -416,7 +416,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 22
       },
       "id": 3,
       "legend": {
@@ -602,5 +602,5 @@
   "timezone": "",
   "title": "KOMPASS",
   "uid": "KOMPASS",
-  "version": 1
+  "version": 2
 }

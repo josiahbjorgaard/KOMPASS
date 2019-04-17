@@ -12,5 +12,5 @@ spec:
   metrics:
   - type: Pods
     pods:
-      metricName: flask_http_request_duration_seconds_sum
-      targetAverageValue: 600m
+      metricName: flask_http_request_total
+      targetAverageValue: 500m
