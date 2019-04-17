@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: kompass
+  labels:
+    app: kompass
+spec:
+  selector:
+    app: kompass
+  ports:
+  - name: http
+    port: 5000
+    targetPort: 5000

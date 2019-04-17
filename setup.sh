@@ -8,7 +8,7 @@ cd ../autoscaling
 ./setup-autoscaler.sh
 cd ../frontend
 ./setup-frontend.sh
-cd ../monitor
+cd ../monitoring
 ./setup-monitor.sh
 cd ../
 echo 'Complete'
