@@ -4,6 +4,7 @@ echo "Running Spark-submit using $2 on $1 nodes with the input $3"
 Spark/bin/spark-submit \
     --master k8s://http://127.0.0.1:8001 \
     --deploy-mode cluster \
+    --verbose \
     --name spark \
     --class org.apache.spark.examples.$2 \
     --conf spark.executor.instances=$1 \

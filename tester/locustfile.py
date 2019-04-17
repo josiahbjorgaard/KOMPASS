@@ -6,7 +6,7 @@ class UserBehavior(TaskSet):
         """
     @task
     def runspark(self):
-        with self.client.get("/run?nodes=4&input=10", catch_response=True) as response:
+        with self.client.get("/run?nodes=4&input=100", catch_response=True) as response:
             if response.status_code is not 200:
                 response.failure("HTTP returned " + str(response.status_code))
             if response.text.find("Succeeded") > 0: # Text is on the page

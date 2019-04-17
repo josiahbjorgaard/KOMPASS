@@ -16,7 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 10,
-  "iteration": 1555362463669,
+  "iteration": 1555370670352,
   "links": [],
   "panels": [
     {
@@ -221,6 +221,7 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "prometheus",
+      "description": "",
       "fill": 1,
       "gridPos": {
         "h": 9,
@@ -252,20 +253,27 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(flask_http_request_duration_seconds_sum{method=\"GET\"})/sum(flask_http_request_total{method=\"GET\"})",
+          "expr": "sum(rate(flask_http_request_duration_seconds_sum{status=\"200\"} [1m]))",
           "format": "time_series",
           "instant": false,
-          "interval": "",
+          "interval": "1s",
           "intervalFactor": 1,
-          "legendFormat": "Average Execution Time",
+          "legendFormat": "Spark Execution Time",
           "refId": "A"
+        },
+        {
+          "expr": "1/sum(rate(flask_http_request_total{status=\"200\"}[1m]))",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "Seconds per HTTP Request",
+          "refId": "B"
         }
       ],
       "thresholds": [],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Instantaneous Average Execution Time",
+      "title": "Users/Time",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -282,7 +290,7 @@
       "yaxes": [
         {
           "format": "short",
-          "label": "Execution time?",
+          "label": "Average Spark Time",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -570,7 +578,7 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-3m",
     "to": "now"
   },
   "timepicker": {
@@ -601,5 +609,5 @@
   "timezone": "",
   "title": "KOMPASS",
   "uid": "KOMPASS",
-  "version": 1
+  "version": 2
 }
