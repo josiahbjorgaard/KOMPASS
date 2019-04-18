@@ -7,6 +7,6 @@ aws autoscaling \
 aws iam put-role-policy \
     --role-name kompass-node \
     --policy-name KOMPASS-AutoScaling \
-    --policy-document file://deploy/eks-autoscaling-policy.json
+    --policy-document file://eks-autoscaling-policy.json
 
 kubectl create -f deploy
