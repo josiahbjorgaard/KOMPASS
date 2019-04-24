@@ -52,10 +52,6 @@ KOMPASS allows multiple users to run many different Spark applications on the sa
 * [Flask](https://flask.io/)
 * [Terraform](https://terraform.io/)
 
-## Engineering Challenges
-
-## Trade-offs
-
 ## Authors
 
 * **Josiah Bjorgaard** - [KOMPASS](https://github.com/josiahbjorgaard/kompass)
