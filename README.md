@@ -48,17 +48,13 @@ KOMPASS allows multiple users to run many different Spark applications on the sa
 * [Apache Spark 2.4.0](https://spark.apache.org/releases/spark-release-2-4-0.html)
 * [Prometheus](https://prometheus.io/)
 * [Grafana](https://grafana.com)
-* [Prometheus Operator] (https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html)
+* [Prometheus Operator](https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html)
 * [Flask](https://flask.io/)
 * [Terraform](https://terraform.io/)
 
 ## Authors
 
 * **Josiah Bjorgaard** - [KOMPASS](https://github.com/josiahbjorgaard/kompass)
-
-## License
-
-This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
