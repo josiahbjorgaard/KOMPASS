@@ -2,7 +2,7 @@
 
 KOMPASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
 
-[Link](bit.ly/kompass-blogpost)
+[Link](http://bit.ly/kompass-blogpost)
 
 <hr/>
 
