@@ -1,4 +1,4 @@
-# KOMPASS (Kubernetes Orchestrated Multi-application Parallel Autoscaling Spark Server)
+# KOMPASS (Kubernetes Orchestrated Multitenant Parallel Autoscaling Spark Server)
 
 KOMPASS provides one-click deployment of your team's Apache Spark jobs using automated and resilient scaling of a multi-user, cloud based Spark server built on top of AWS, Kubernetes, and Prometheus. 
 
