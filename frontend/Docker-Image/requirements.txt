@@ -1,5 +1,5 @@
 Flask==1.0.2
-Flask-Cors==3.0.4
+Flask-Cors==3.0.9
 flask-migrate==2.2.0
 prometheus_flask_exporter
 Flask-SQLAlchemy==2.3.2
